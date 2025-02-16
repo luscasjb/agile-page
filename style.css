@@ -1,0 +1,436 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ffc400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: #ffc400;
+  width: 100%;
+  padding: 1em;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0 30px 0;
+  border-bottom: 2px solid #333;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 25px;
+  color: #333;
+  margin: 0;
+  padding-left: 2em;
+}
+
+.tema {
+  margin-left: auto;
+  padding-right: 1em;
+}
+
+.tema button {
+  width: 100px;
+  font-weight: 400;
+  font-size: 12px;
+  border-radius: 80px;
+  background: #ffc400;
+  border: 2px solid #333;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.menu {
+  background: #ffc400;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.submenu {
+  margin-left: 1em;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  padding: 0.7em;
+  font-size: 18px;
+}
+
+.submenu:hover {
+  color: #000;
+}
+
+.principios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.alfinete {
+  transform: rotate(-45deg);
+  width: 30px;
+  height: auto;
+  padding: 20px 10px 20px 0;
+  margin-bottom: 10px;
+  vertical-align: middle; /* Garante alinhamento vertical */
+}
+
+.alfinete-final {
+  transform: rotate(45deg);
+  width: 30px;
+  height: auto;
+  padding: 20px 0 20px 10px;
+  margin-bottom: 10px;
+  vertical-align: middle; /* Garante alinhamento vertical */
+}
+
+.titulo-principios,
+.titulo-valores,
+.links-mets {
+  font-family: "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  padding: 10px 15px;
+  background: #ffeb3b;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Efeito de sombra no "papel" */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra no texto */
+  margin: 30px 0 0 30px;
+}
+
+.div-valores .div-principios {
+  text-align: left;
+}
+
+.valores .principios {
+  list-style-type: none; /* Remove o marcador de lista */
+}
+
+.titulo-valores .titulo-principios {
+  text-align: left;
+}
+
+.valores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.info li {
+  padding: 16px;
+  width: 220px;
+  min-height: 180px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  position: relative;
+  transform: rotate(-2deg);
+  border-radius: 4px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Efeito de rotação alternada para criar variação */
+.info li:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+/* Efeito de dobra para o canto do post-it */
+.info li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 45px; /* Tamanho maior */
+  height: 45px; /* Tamanho maior */
+  border-bottom-right-radius: 12px; /* Mais arredondado */
+  transform: rotate(0deg);
+  pointer-events: none;
+}
+
+/* Post-it Amarelo */
+li.amarelo {
+  background: #ffeb3b;
+}
+
+li.amarelo::before {
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(255, 235, 59, 0.8) 50%,
+    transparent 80%
+  );
+}
+
+/* Post-it Verde Claro */
+li.verde {
+  background: #a5d6a7;
+}
+
+li.verde::before {
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(165, 214, 167, 0.8) 50%,
+    transparent 80%
+  );
+}
+
+/* Post-it Vermelho Claro */
+li.vermelho {
+  background: #f8b4b4; /* Vermelho claro */
+}
+
+li.vermelho::before {
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(248, 180, 180, 0.8) 50%,
+    transparent 80%
+  );
+}
+
+/* Post-it Laranja Claro */
+li.laranja {
+  background: #f8b87f;
+}
+
+li.laranja::before {
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(248, 184, 127, 0.8) 50%,
+    transparent 80%
+  );
+}
+
+.info li strong {
+  font-size: 16px;
+  color: #444;
+}
+
+.info li p {
+  font-size: 14px;
+  color: #333;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Efeito de levantamento ao passar o mouse */
+.info li:hover {
+  transform: scale(1.05) rotate(0deg);
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container-metodos {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-metodos h2 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.container-metodos ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+}
+
+.link-metodo a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  padding: 20px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.link-metodo:hover a {
+  color: #000; /* Cor do texto ao passar o mouse */
+}
+
+/* Cores dos post-its para os métodos ágeis */
+.container-metodos .link-metodo {
+  padding: 16px;
+  width: 220px;
+  min-height: 80px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  position: relative;
+  transform: rotate(-2deg);
+  border-radius: 4px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Efeito de rotação alternada para criar variação */
+.container-metodos .link-metodo:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+/* Efeito de dobra para o canto do post-it */
+.container-metodos .link-metodo::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  border-bottom-right-radius: 12px;
+  transform: rotate(0deg);
+  pointer-events: none;
+}
+
+/* Post-it lilás*/
+.container-metodos .lilas {
+  background: #d1a6d7;
+}
+
+.containes-metodos .lilas::before {
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(209, 166, 215, 0.8) 50%,
+    transparent 80%
+  );
+}
+
+/* Post-it Verde Limão */
+.container-metodos .limao {
+  background: #d4f56a; /* Verde limão */
+}
+
+.container-metodos .limao::before {
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(212, 245, 106, 0.8) 50%,
+    transparent 80%
+  );
+}
+
+.container-metodos .laranja {
+  background: #f8b87f;
+}
+
+.container-metodos .laranja::before {
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(248, 184, 127, 0.8) 50%,
+    transparent 80%
+  );
+}
+
+/* Hover effect on post-its */
+.container-metodos .link-metodo:hover {
+  transform: scale(1.05) rotate(0deg);
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  bottom: 0;
+  background-color: #ffc400;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  border-top: 3px solid #000;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3em 1.5em;
+}
+
+.contatos {
+  font-size: 14px;
+  color: #333;
+}
+
+.manifesto {
+  font-size: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.manifesto > a:hover {
+  color: #000;
+}
+
+.manifesto > a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Tema dark */
+
+.dark {
+  background: #333333;
+}
+
+.dark header {
+  background: #333333;
+  color: #f6f6f6;
+  border-bottom: 2px solid #ffc400;
+}
+
+.dark h1 {
+  color: #ffc400;
+}
+
+.dark .tema button {
+  background: #333;
+  color: #ffc400;
+  border: 2px solid #ffc400;
+}
+
+.dark .menu {
+  background-color: #333333;
+}
+
+.dark .submenu,
+.dark main,
+.dark .manifesto > a,
+.dark .contatos {
+  color: #ffc400;
+}
+
+.dark .link-metodo > a {
+  color: #333;
+}
+
+.dark footer {
+  background-color: #333333;
+  border-top: 2px solid #ffc400;
+}
+
+.dark .manifesto > a:hover {
+  background-color: #333333;
+}
