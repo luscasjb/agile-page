@@ -244,6 +244,7 @@ li.laranja::before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 30px;
 }
 
 .container-metodos h2 {
@@ -426,11 +427,15 @@ footer {
   color: #333;
 }
 
+.dark .link-metodo:hover a {
+  color: #000;
+}
+
 .dark footer {
   background-color: #333333;
   border-top: 2px solid #ffc400;
 }
 
 .dark .manifesto > a:hover {
-  background-color: #333333;
+  color: #ffeb3b;
 }
